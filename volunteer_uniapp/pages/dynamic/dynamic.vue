@@ -1,6 +1,6 @@
 <template>
-	<view >
-		这是login页面
+	<view class="">
+		这是用户动态页面
 	</view>
 </template>
 

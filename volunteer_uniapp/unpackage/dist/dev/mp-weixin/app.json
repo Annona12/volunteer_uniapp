@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/dynamic/dynamic",
+    "pages/user/user",
+    "pages/login/login"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "志愿者服务平台",
+    "navigationBarBackgroundColor": "#c70909",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#d61002",
+    "onReachBottomDistance": 50,
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "selectedColor": "#c70909",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "static/image/tabbar_icon/首页.png",
+        "selectedIconPath": "static/image/tabbar_icon/首页_active.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/message/message",
+        "iconPath": "static/image/tabbar_icon/消息.png",
+        "selectedIconPath": "static/image/tabbar_icon/消息_active.png"
+      },
+      {
+        "text": "动态",
+        "pagePath": "pages/dynamic/dynamic",
+        "iconPath": "static/image/tabbar_icon/动态.png",
+        "selectedIconPath": "static/image/tabbar_icon/动态_active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/user/user",
+        "iconPath": "static/image/tabbar_icon/我的.png",
+        "selectedIconPath": "static/image/tabbar_icon/我的_active.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap7.json"
+}

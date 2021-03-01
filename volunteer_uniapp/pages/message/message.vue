@@ -1,6 +1,6 @@
 <template>
-	<view >
-		这是login页面
+	<view class="">
+		这是用户消息页面
 	</view>
 </template>
 
