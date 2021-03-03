@@ -1,0 +1,1 @@
+<view>这是一个组件<button type="warn">自定义组件</button>{{''+title+''}}<button type="default" data-event-opts="{{[['tap',[['sendNum',['$event']]]]]}}" bindtap="__e">给父组件传值</button></view>

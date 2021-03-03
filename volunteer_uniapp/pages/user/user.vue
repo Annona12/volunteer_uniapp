@@ -1,10 +1,18 @@
 <template>
 	<view class="">
-		这是用户个人信息页面
+		
+		<user-message></user-message>
+		<button type="default">前往登录</button>
 	</view>
 </template>
 
 <script>
+	import userMessage from '../../components/user/usermessage.vue'
+	export default{
+		components:{
+			userMessage
+		}
+	}
 </script>
 
 <style>

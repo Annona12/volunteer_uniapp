@@ -37,7 +37,7 @@
 		"navigationBarBackgroundColor": "#c70909",//导航栏背景颜色
 		"enablePullDownRefresh":true,//是否允许下拉
 		"backgroundColor": "#d61002",//窗口的背景颜色，默认看不到，设置enablePullDownRefresh属性后，下拉可以看到背景颜色
-		"onReachBottomDistance":50,
+		"onReachBottomDistance":50,//到达滚动条底部的距离
 		"backgroundTextStyle":"light",
 		"app-plus": {
 			"background": "#efeff4"
@@ -80,7 +80,7 @@
 		"list":[
 			{
 				"name":"详情页",
-				"path":"pages/login/login",
+				"path":"pages/detail/detail",
 				"query":"id=80"
 			}
 		]

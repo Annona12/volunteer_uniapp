@@ -98,6 +98,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniCalendar: function() {
+      return Promise.all(/*! import() | components/uni-calendar/uni-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-calendar/uni-calendar")]).then(__webpack_require__.bind(null, /*! @/components/uni-calendar/uni-calendar.vue */ 41))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -130,14 +153,193 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/fourth_nanjing/Graduation Design/code/volunteer_uniapp/volunteer_uniapp/pages/home/home.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-//
-//
-//
-//
-//
-//
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var test = function test() {__webpack_require__.e(/*! require.ensure | components/home/test */ "components/home/test").then((function () {return resolve(__webpack_require__(/*! ../../components/home//test.vue */ 50));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniCalendar = function uniCalendar() {Promise.all(/*! require.ensure | components/uni-calendar/uni-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-calendar/uni-calendar")]).then((function () {return resolve(__webpack_require__(/*! ../../components/uni-calendar/uni-calendar.vue */ 41));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  data: function data() {
+    return {
+      title: 'message',
+      flag: true,
+      msg: 'hello,world',
+      imgarry: [],
+      imageUrl: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fa0.att.hudong.com%2F30%2F29%2F01300000201438121627296084016.jpg&refer=http%3A%2F%2Fa0.att.hudong.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617262761&t=9db72c035732deab87f684fd02a716b2',
+      arr: [
+      {
+        name: 'Li', age: 10 }] };
+
+
+
+  },
+  onLoad: function onLoad() {
+    console.log('页面加载了');
+
+    console.log('在微信小程序中打印');
+
+
+
+
+  },
+  methods: {
+    clickHandle: function clickHandle(num, e) {
+      console.log('点击了', num);
+    },
+    pullDown: function pullDown() {
+      uni.startPullDownRefresh();
+    },
+    get: function get() {
+      uni.request({
+        url: 'http://localhost:3000/getposts',
+        success: function success(res) {
+          console.log(res);
+        } });
+
+    },
+    setStorage: function setStorage() {
+      // uni.setStorage({
+      // 	key:'id',
+      // 	data:80,
+      // 	success(res){
+      // 		console.log('存储成功')
+      // 	}
+      // })
+      uni.setStorageSync('id', 100);
+    },
+    getStorage: function getStorage() {
+      uni.getStorage({
+        key: 'id',
+        success: function success(res) {
+          console.log('获取成功', res.data);
+        } });
+
+    },
+    removeStorage: function removeStorage() {
+      uni.removeStorage({
+        key: 'id',
+        success: function success() {
+          console.log('移除成功');
+        } });
+
+    },
+    onPullDownRefresh: function onPullDownRefresh() {var _this = this;
+      console.log('更新了列表');
+      //更新完成就将下拉更新暂停
+      setTimeout(function () {
+        _this.msg = '更新了页面';
+        uni.stopPullDownRefresh();
+      }, 2000);
+    },
+    onReachBottom: function onReachBottom() {
+      console.log('触发到底部了');
+      this.arr.push(
+      {
+        name: 'Li', age: 11 },
+      {
+        name: 'Li', age: 12 });
+
+
+    },
+    //选择图片上传
+    uploadPhoto: function uploadPhoto() {var _this2 = this;
+      // console.log('上传图片')
+      uni.chooseImage({
+        count: 5,
+        success: function success(res) {
+          // console.log(res)
+          _this2.imgarry = res.tempFilePaths;
+        } });
+
+
+    },
+    //预览图片
+    previewImg: function previewImg(current) {
+      // console.log(current)
+      uni.previewImage({
+        current: current,
+        urls: this.imgarry,
+        loop: true,
+        indicator: 'number' });
+
+    },
+    gotoDetail: function gotoDetail() {
+      uni.navigateTo({
+        url: '/pages/login/login' });
+
+    },
+    changeTest: function changeTest() {
+      this.flag = !this.flag;
+    },
+    getNum: function getNum(num) {
+      console.log(num);
+    },
+    change: function change() {
+      console.log('触发了事件');
+    } },
+
+  components: {
+    test: test,
+    uniCalendar: uniCalendar } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ],[[11,"common/runtime","common/vendor"]]]);

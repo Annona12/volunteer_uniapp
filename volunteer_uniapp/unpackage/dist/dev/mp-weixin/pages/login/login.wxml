@@ -1,1 +1,1 @@
-<view>这是login页面</view>
+<view>这是login页面<navigator url="/pages/home/home" open-type="switchTab">跳转至首页面</navigator><button type="primary" data-event-opts="{{[['tap',[['gotoHome',['$event']]]]]}}" bindtap="__e">回到首页</button></view>

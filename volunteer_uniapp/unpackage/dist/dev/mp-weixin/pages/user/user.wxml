@@ -1,1 +1,1 @@
-<view>这是用户个人信息页面</view>
+<view><user-message vue-id="380011e0-1" bind:__l="__l"></user-message><button type="default">前往登录</button></view>
